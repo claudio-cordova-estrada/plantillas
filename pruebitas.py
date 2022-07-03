@@ -29,4 +29,27 @@ validadorListaID(validador) # Forma de llamar a la función
     except ValueError:
         print("Todo mal la verda'")"""
 
-asdf = int(input("==> "))
+try:
+    while True:
+        anio = int(input("Ingrese el año ==> "))
+        if anio > 2050 or anio < 2000:
+            print("Año ingresada incorrecta, intentalo nuevamente")
+        else:
+            break
+    while True:
+        mes = int(input("Ingrese el mes ==> "))
+        if mes > 12:
+            print("Año ingresada incorrecta, intentalo nuevamente")
+        else:
+            break
+    while True:
+        dia = int(input("Ingrese el día ==> "))
+        if dia > 31:
+            print("Año ingresada incorrecta, intentalo nuevamente")
+        else:
+            break
+except ValueError:
+    print("Tipo de valor ingresado incorrecto, intentelo nuevamente")
+fecha = str(dia) + "-" + str(mes) + "-" + str (anio)
+
+print(fecha)
