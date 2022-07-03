@@ -15,12 +15,12 @@ validador_vacio(algo) # Forma de llamar a la función
 # Comentario: no es necesario ocupar el validador de vacío con un "int", puesto que el solo ingresar un valor vacío lanzará error.
 # Se recomienda para el caso anterior tener siempre un "try/except ValueError" para prevenir de que el sistema se caiga
 
-# ---------------- Función validador de lista ----------------
+# ---------------- Función validador con impresión de valores ----------------
 # Dentro de lista con algún tipo de ID (identificador único) numerico
 
-lista = [] # Dejar al principio del codigo como buena practica de declaración de variables
-contador = 0 # Dejar al principio del codigo como buena practica de declaración de variables
+lista = [] # Se recomienda dejar al principio del codigo
 def validadorListaID(validador):
+    contador = 0 # Se recomienda dejar al principio del codigo
     if not lista:
         print("Su lista se encuentra vacía, intentelo nuevamente")
     else:
@@ -28,7 +28,7 @@ def validadorListaID(validador):
             if i[0] == validador:
                 for c in i:
                     print(c, end = " ")
-                break
+                break # Rompe con el ciclo del "for"
             else:
                 contador =+ 1
         if contador == len(lista):
@@ -37,6 +37,9 @@ def validadorListaID(validador):
 validador = int(input("==> ")) # Esta linea habrá de estar dentro del codigo principal
 # En caso de querer validar con un tipo de validador string, sacar "int" del input que le damos a la variable validador que entregamos dentro de la función
 validadorListaID(validador) # Forma de llamar a la función
+
+# ---------------- Función validador con impresión de valores ----------------
+# Busca validar que el primer caracter de un string sea mayuscula
 
 # ---------------- Plantilla de menú ----------------
 # Reemplazar los print con el codigo que desee
@@ -64,6 +67,8 @@ while opcion != 5:
         print("d")
     elif opcion == 5:
         print("Muchas gracias por preferirnos!")
+    else:
+        print("Valor ingresado incorrecto, intentelo nuevamente")
 
 # ---------------- Un while True para validación de inputs numericos ----------------
 # Simplemente busca validar que el dato ingresado se corresponda con el tipo numerico
@@ -89,4 +94,16 @@ while True:
     else:
         break # Caso positivo
 
-# 
+# ---------------- Un while True para validación de strings ----------------
+# Un validador de strings de acuerdo a lo que se nos solicite validar
+# Esto se hace con un ".upper()" en el input, lo que guardará lo ingresado en mayuscula
+# En caso de querer guardar tal cual como ingresa el usuario, colocar ".upper()" en 
+# todas las variables que se coloquen en la validación del "if"
+
+while True:
+    palabra = input("==> ").upper() # El ".upper()" hará de que todo lo ingresado por el usuario automáticamente se coloque en mayuscula
+    if palabra == "XD" or palabra == "LOL" or palabra == "UWU": # Llamada a la variable para validación con strings. En caso de tener más formas de validar, añadir más strings siguiendo el mismo patrón
+        print("Valores validados correctamente")
+        break
+    else:
+        print("Valores ingresados incorrectos, intentelo nuevamente")
