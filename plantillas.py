@@ -10,7 +10,7 @@ def validador_vacio(p_algo):
             p_algo = input('Ingrese algo => ')
 
 algo = input("==> ") # Esta linea habrá de estar dentro del codigo principal
-validador_vacio(algo) # Forma de llamar a la función
+algo = validador_vacio(algo) # Forma de llamar a la función
 
 # Comentario: no es necesario ocupar el validador de vacío con un "int", puesto que el solo ingresar un valor vacío lanzará error.
 # Se recomienda para el caso anterior tener siempre un "try/except ValueError" para prevenir de que el sistema se caiga
@@ -105,8 +105,6 @@ try:
 except ValueError:
     print("Tipo de valor ingresado incorrecto, intentelo nuevamente")
 fecha = str(dia) + "-" + str(mes) + "-" + str(anio)
-
-print(fecha)
 
 # ---------------- Un while True para validación de numeros dentro de rangos ----------------
 # Simplemente busca validar que el dato ingresado se corresponda con el tipo numerico

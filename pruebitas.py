@@ -29,7 +29,7 @@ validadorListaID(validador) # Forma de llamar a la función
     except ValueError:
         print("Todo mal la verda'")"""
 
-try:
+"""try:
     while True:
         anio = int(input("Ingrese el año ==> "))
         if anio > 2050 or anio < 2000:
@@ -52,4 +52,16 @@ except ValueError:
     print("Tipo de valor ingresado incorrecto, intentelo nuevamente")
 fecha = str(dia) + "-" + str(mes) + "-" + str (anio)
 
-print(fecha)
+print(fecha)"""
+
+
+"""def unaFuncion(p_algo):
+    return print(p_algo)
+
+unaFuncion("xd")"""
+
+"""def menu(algo):
+    return print(algo)
+
+menu("xd")"""
+
